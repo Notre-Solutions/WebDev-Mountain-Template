@@ -43,6 +43,7 @@ class navbar extends React.Component {
         });
       }
     }
+    console.log(this.state);
   };
 
   render() {
@@ -50,11 +51,9 @@ class navbar extends React.Component {
       <>
         <header>
           <nav
-            className={classnames("navbar navbar-default", {
+            className={classnames("navbar navbar-default navbar-fixed-top", {
               // "collapse in": this.state.active,
               active: this.state.passedHero || this.props.current !== "landing",
-              "navbar-fixed-top":
-                !this.state.passedHero || this.props.current === "landing",
             })}
             // class="navbar navbar-default navbar-fixed-top active"
           >
@@ -62,7 +61,7 @@ class navbar extends React.Component {
               <div class="navbar-header">
                 <button
                   type="button"
-                  class="navbar-toggle collapsed"
+                  class="navbar-toggle"
                   data-toggle="collapse"
                   data-target="#navbar-collapse"
                   aria-expanded="false"
@@ -78,7 +77,12 @@ class navbar extends React.Component {
                 </Link>
               </div>
 
-              <div class="collapse navbar-collapse" id="navbar-collapse">
+              <div
+                className={classnames("collapse navbar-collapse", {
+                  "collapse in": this.state.active,
+                })}
+                id="navbar-collapse"
+              >
                 <ul class="nav navbar-nav navbar-right">
                   <li>
                     <Link to="/" title="">
