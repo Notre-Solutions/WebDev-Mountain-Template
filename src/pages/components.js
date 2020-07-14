@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 
 const components = () => {
   return (
-    <Layout current="components">
+    <Layout current="">
       <div class="container navbar-fixed-space">
         <div class="row">
           <div class="col-xs-12 col-md-6">

@@ -72,9 +72,6 @@ class navbar extends React.Component {
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <Link class="navbar-brand" to="/" title="">
-                  Notre Template
-                </Link>
               </div>
 
               <div
@@ -95,15 +92,13 @@ class navbar extends React.Component {
                     </Link>
                   </li>
                   <li>
-                    <p>
-                      <Link
-                        to="/components"
-                        class="btn btn-default navbar-btn"
-                        title=""
-                      >
-                        Components
-                      </Link>
-                    </p>
+                    <Link
+                      to="/components"
+                      // class="btn btn-default navbar-btn"
+                      title=""
+                    >
+                      Components
+                    </Link>
                   </li>
                 </ul>
               </div>
