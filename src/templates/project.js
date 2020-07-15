@@ -8,6 +8,9 @@ const project = ({ data }) => {
     img07,
     img05,
     img04,
+    title,
+    paragraph,
+    infoParagraph,
   } = data.markdownRemark.frontmatter.projectPage;
 
   return (
@@ -16,15 +19,8 @@ const project = ({ data }) => {
         <div class="container navbar-fixed-space">
           <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
-              <h1 class="text-center">Moon</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas luctus at sem quis varius. Class aptent taciti sociosqu
-                ad litora torquent per conubia nostra, per inceptos himenaeos.
-                Phasellus iaculis magna sagittis elit sagittis, at hendrerit
-                lorem venenatis. Morbi accumsan iaculis blandit. Cras ultrices
-                hendrerit nisl.
-              </p>
+              <h1 class="text-center">{title}</h1>
+              <p>{paragraph}</p>
 
               <div class="section-container-spacer">
                 <Img
@@ -64,21 +60,7 @@ const project = ({ data }) => {
             <div class="col-xs-12 col-md-8 col-md-offset-2">
               <h2 class="text-center">More</h2>
               <div class="section-container-spacer">
-                <p>
-                  Praesent at feugiat est, at faucibus ipsum. Aenean condimentum
-                  mauris vel malesuada pulvinar. Vestibulum sit amet hendrerit
-                  leo, quis vehicula mi.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
+                <p>{infoParagraph}</p>
               </div>
               <Img
                 className="img-responsive reveal-content"
@@ -134,6 +116,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         projectPage {
+          infoParagraph
+          title
+          paragraph
           img05 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
