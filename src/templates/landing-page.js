@@ -242,7 +242,7 @@ export const pageQuery = graphql`
               img {
                 childImageSharp {
                   fluid(maxWidth: 10000, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
@@ -259,35 +259,35 @@ export const pageQuery = graphql`
           img06 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           img07 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           logo01 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           logo02 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           logo03 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }

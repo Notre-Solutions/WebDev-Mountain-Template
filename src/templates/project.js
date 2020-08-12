@@ -122,28 +122,28 @@ export const pageQuery = graphql`
           img05 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           img06 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           img07 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           img04 {
             childImageSharp {
               fluid(maxWidth: 10000, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
